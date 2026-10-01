@@ -1,4 +1,45 @@
 const songs = [
+// FINALLY RICH
+  {
+    key: "Love Sosa",
+    title: "Love Sosa",
+    artist: "Chief Keef",
+    
+    music: "Music/Chief Keef/Finally Rich/Love Sosa.mp3",
+
+    album: "Finally Rich",
+    albumkey: "finallyrich",
+
+    lyricOffset: -0.65,
+    ex: true,
+  },
+  {
+    key: "I Don't Like",
+    title: "I Don't Like",
+    artist: "Chief Keef" + ", Lil Reese",
+    
+    music: "Music/Chief Keef/Finally Rich/I Don't Like.mp3",
+
+    album: "Finally Rich",
+    albumkey: "finallyrich",
+
+    lyricOffset: -0.65,
+    ex: true,
+  },
+  {
+    key: "Hate Bein' Sober",
+    title: "Hate Bein' Sober",
+    artist: "Chief Keef" + ", 50 Cent, Wiz Khalifa",
+    
+    music: "Music/Chief Keef/Finally Rich/Hate Bein' Sober.mp3",
+
+    album: "Finally Rich",
+    albumkey: "finallyrich",
+
+    lyricOffset: -0.65,
+    ex: true,
+  },
+
   // TLOP
   {
     key: "Father Stretch My Hands Pt. 1",
@@ -113,6 +154,61 @@ const songs = [
     
     album: "Yeezus",
     albumkey: "yeezus",
+
+    lyricOffset: -0.65,
+    ex: true,
+  },
+
+
+  // WTT
+
+  {
+    key: "No Church In The Wild",
+    title: "No Church In The Wild",
+    artist: "JAŸ-Z" + ", Kanye West" + ", Frank Ocean, THE-DREAM",
+    music: "Music/Kanye West/Watch The Throne/No Church In The Wild.mp3",
+    
+    album: "Watch The Throne (Deluxe)",
+    albumkey: "watchthethrone",
+
+    lyricOffset: -0.65,
+    ex: true,
+  },
+
+  {
+    key: "Ni**as In Paris",
+    title: "Ni**as In Paris",
+    artist: "JAŸ-Z" + ", Kanye West",
+    music: "Music/Kanye West/Watch The Throne/Nigg_s In Paris.mp3",
+    
+    album: "Watch The Throne (Deluxe)",
+    albumkey: "watchthethrone",
+
+    lyricOffset: -0.65,
+    ex: true,
+  },
+
+  {
+    key: "Who Gon Stop Me",
+    title: "Who Gon Stop Me",
+    artist: "JAŸ-Z" + ", Kanye West",
+    music: "Music/Kanye West/Watch The Throne/Who Gon Stop Me.mp3",
+    
+    album: "Watch The Throne (Deluxe)",
+    albumkey: "watchthethrone",
+
+    lyricOffset: -0.65,
+    ex: true,
+  },
+
+  {
+    key: "Why I Love You",
+    title: "Why I Love You",
+    artist: "JAŸ-Z" + ", Kanye West",
+    music: "Music/Kanye West/Watch The Throne/Why I Love You.mp3",
+    
+    album: "Watch The Throne (Deluxe)",
+    albumkey: "watchthethrone",
 
     lyricOffset: -0.65,
     ex: true,

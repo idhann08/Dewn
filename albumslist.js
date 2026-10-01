@@ -67,5 +67,36 @@ const albums = [
             b4: "#252525",
             b5: "#2d2d2d"
         }
-    }
+    },
+
+    {
+        key: "watchthethrone",
+        name: "Watch The Throne (Deluxe)",
+        cover: "Album/Kanye West/wtt.jpeg",
+
+        colors: {
+            b1: "#99783f",
+            b2: "#99783f",
+            b3: "#cac653",
+            b4: "#99783f",
+            b5: "#99783f"
+        }
+    },
+
+
+    // Chief KEEFFF
+
+    {
+        key: "finallyrich",
+        name: "Finally Rich",
+        cover: "Album/Chief Keef/finallyrich.jpeg",
+
+        colors: {
+            b1: "#000000",
+            b2: "#331a11",
+            b3: "#4b2f0b",
+            b4: "#615923",
+            b5: "#2f2f2f"
+        }
+    },
 ];
