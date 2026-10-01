@@ -75,11 +75,11 @@ const albums = [
         cover: "Album/Kanye West/wtt.jpeg",
 
         colors: {
-            b1: "#99783f",
-            b2: "#99783f",
+            b1: "#84510c",
+            b2: "#503510",
             b3: "#cac653",
-            b4: "#99783f",
-            b5: "#99783f"
+            b4: "#84510c",
+            b5: "#84510c"
         }
     },
 
