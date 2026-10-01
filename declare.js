@@ -19,3 +19,6 @@ const volume = document.getElementById("volume");
 const vicon = document.getElementById("vicon");
 const prev = document.getElementById("prevbtn");
 const next = document.getElementById("nextbtn");
+const lyricsbtnt = document.getElementById("lyricsbtntoggle");
+const rsect = document.getElementById("rsect");
+const lsectt = document.getElementById("lsectt");

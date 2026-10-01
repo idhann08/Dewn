@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
+*{
+    -webkit-tap-highlight-color: none;
+}
+
 body{
     display: flex;
     overflow: hidden;
@@ -16,7 +20,7 @@ div{
 .bg {
     position: absolute;
     inset: -20%;
-    filter: blur(95px) brightness(0.8);
+    filter: blur(105px) brightness(0.8);
 }
 
 .blob{
@@ -111,6 +115,7 @@ div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition:.35s cubic-bezier(.25, .8, .25, 1);
 }
 .rightsect {
     align-items: start;
@@ -410,4 +415,41 @@ button{
 #lyrics p.active {
     opacity: 1;
     font-size: 2.2rem;
+}
+
+/* lyricsbtntoggle */
+#lyricsbtntoggle {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #ffffff1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.15s all;
+}
+#lyricsbtntoggle:hover {
+    background-color: #ffffff2a;
+}
+#lyricsbtntoggle svg {
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    opacity: 1;
+    transition: 0.2s all;
+}
+
+#rsect.hide{
+    display: none;
+    width: 0%;
+}
+#lsectt.hide{
+    width: 100%;
+}
+#lyricsbtntoggle svg.hide{
+    opacity: 0.6;
 }

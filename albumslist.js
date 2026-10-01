@@ -99,4 +99,22 @@ const albums = [
             b5: "#2f2f2f"
         }
     },
+
+
+
+    // SHAWNMENDESS
+
+    {
+        key: "illuminate",
+        name: "Illuminate",
+        cover: "Album/Shawn Mendes/illuminate.jpeg",
+
+        colors: {
+            b1: "#244817",
+            b2: "#11301a",
+            b3: "#2d6093",
+            b4: "#269e4c",
+            b5: "#0e2c10"
+        }
+    },
 ];

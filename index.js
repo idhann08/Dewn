@@ -405,3 +405,17 @@ document.addEventListener("keydown", (e) => {
     }
 
 });
+
+// Lyrics TOGGLEE
+
+lyricsbtnt.addEventListener("click", () => {
+    if (rsect.classList.contains("hide")) {
+        rsect.classList.remove("hide");
+        lsectt.classList.remove("hide");
+        lyricsbtnt.querySelector("svg").classList.add("hide");
+    } else {
+        rsect.classList.add("hide");
+        lsectt.classList.add("hide");
+        lyricsbtnt.querySelector("svg").classList.remove("hide");
+    }
+});

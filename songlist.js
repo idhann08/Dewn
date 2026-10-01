@@ -1,4 +1,88 @@
 const songs = [
+
+  // SHAWNNNNILUMIATE
+
+  {
+    key: "Treat You Better",
+    title: "Treat You Better",
+    artist: "Shawn Mendes",
+    
+    music: "Music/Shawn Mendes/Illuminate/Treat You Better.mp3",
+
+    album: "Illuminate",
+    albumkey: "illuminate",
+
+    lyricOffset: -0.65,
+    ex: false,
+  },
+  {
+    key: "There's Nothing Holdin' Me Back",
+    title: "There's Nothing Holdin' Me Back",
+    artist: "Shawn Mendes",
+    
+    music: "Music/Shawn Mendes/Illuminate/There's Nothing Holdin' Me Back.mp3",
+
+    album: "Illuminate",
+    albumkey: "illuminate",
+
+    lyricOffset: -0.65,
+    ex: false,
+  },
+  {
+    key: "Mercy",
+    title: "Mercy",
+    artist: "Shawn Mendes",
+    
+    music: "Music/Shawn Mendes/Illuminate/Mercy.mp3",
+
+    album: "Illuminate",
+    albumkey: "illuminate",
+
+    lyricOffset: -0.65,
+    ex: false,
+  },
+  {
+    key: "Ruin",
+    title: "Ruin",
+    artist: "Shawn Mendes",
+    
+    music: "Music/Shawn Mendes/Illuminate/Ruin.mp3",
+
+    album: "Illuminate",
+    albumkey: "illuminate",
+
+    lyricOffset: -0.65,
+    ex: false,
+  },
+  {
+    key: "Bad Reputation",
+    title: "Bad Reputation",
+    artist: "Shawn Mendes",
+    
+    music: "Music/Shawn Mendes/Illuminate/Bad Reputation.mp3",
+
+    album: "Illuminate",
+    albumkey: "illuminate",
+
+    lyricOffset: -0.65,
+    ex: false,
+  },
+  {
+    key: "Honest",
+    title: "Honest",
+    artist: "Shawn Mendes",
+    
+    music: "Music/Shawn Mendes/Illuminate/Honest.mp3",
+
+    album: "Illuminate",
+    albumkey: "illuminate",
+
+    lyricOffset: -0.65,
+    ex: false,
+  },
+
+
+
 // FINALLY RICH
   {
     key: "Love Sosa",
