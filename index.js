@@ -404,18 +404,36 @@ document.addEventListener("keydown", (e) => {
         prevbtn.click();
     }
 
+    // SHOWLYRICS
+    if (e.ctrlKey && e.code === "KeyP") {
+        e.preventDefault();
+        lyricsbtnt.click();
+    }
+
 });
+
+// flexcontent
+function flexxx(){
+    if (rsect.style.display === "none"){
+        lsectt.classList.add("hide");
+    } else{
+    }
+}
+flexxx();
 
 // Lyrics TOGGLEE
 
 lyricsbtnt.addEventListener("click", () => {
     if (rsect.classList.contains("hide")) {
         rsect.classList.remove("hide");
+        rsect.classList.add("view");
         lsectt.classList.remove("hide");
         lyricsbtnt.querySelector("svg").classList.add("hide");
     } else {
         rsect.classList.add("hide");
+        rsect.classList.remove("view");
         lsectt.classList.add("hide");
         lyricsbtnt.querySelector("svg").classList.remove("hide");
     }
 });
+flexxx();

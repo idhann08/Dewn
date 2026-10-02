@@ -442,14 +442,36 @@ button{
     opacity: 1;
     transition: 0.2s all;
 }
-
 #rsect.hide{
     display: none;
     width: 0%;
+}
+#rsect.view{
+    display: flex;
 }
 #lsectt.hide{
     width: 100%;
 }
 #lyricsbtntoggle svg.hide{
     opacity: 0.6;
+}
+
+
+/* MEDIAA */
+@media (max-width: 480px) {
+    .leftsect{
+        width: 100%;
+    }
+    #rsect {
+        align-items: center;
+        display: none;
+    }
+    .lyricssect {
+        width: 90%;
+        height: 400px;
+    }
+    .coverr{
+        width: 300px;
+        height: 300px;
+    }
 }
