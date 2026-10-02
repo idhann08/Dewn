@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 *, button, input, svg{
-    -webkit-tap-highlight-color: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body{
@@ -95,7 +95,6 @@ div{
 
 .coverr{
     width: 450px;
-    height: 450px;
     position: relative;
     z-index: 1;
     display: block;
@@ -459,9 +458,24 @@ button{
 
 /* MEDIAA */
 @media (max-width: 480px) {
-    .leftsect, .rightsect{
-        width: 100%;
+    .bg {
+        inset: 0;
+        width: 100dvw;
         height: 100dvh;
+        overflow: hidden;
+        filter: blur(80px) brightness(0.8);
+    }
+
+    .blob {
+        width: min(52vw, 220px);
+        height: min(52vw, 220px);
+        opacity: 0.72;
+    }
+
+    .leftsect, .rightsect{
+        width: 100dvw;
+        height: 100dvh;
+        overflow: hidden;
     }
     #rsect {
         align-items: center;
@@ -472,10 +486,70 @@ button{
         height: 400px;
     }
     .lsect{
-        width: 340px;
+        width: 300px;
+        padding: 0 30px;
     }
     .coverr{
-        width: 340px;
-        height: 340px;
+        width: 100%;
+    }
+    .title, .artist{
+        font-size: 1rem;
+    }
+
+    .volumesect{
+        width: 100%;
+        height: 30px;
+        justify-content: center;
+    }
+    #volume{
+        width: 100%;
+    }
+    .volumeicon{
+        width: 8%;
+    }
+
+    .controlerr button svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .blob1 {
+        top: 2dvh;
+        left: -6vw;
+        animation: blob1 16s ease-in-out infinite;
+    }
+
+    .blob2 {
+        top: 4dvh;
+        right: 52vw;
+        animation: blob2 13s ease-in-out infinite;
+    }
+
+    .blob3 {
+        width: min(46vw, 190px);
+        height: min(46vw, 190px);
+        top: 36dvh;
+        right: 8vw;
+        animation: blob3 10s ease-in-out infinite;
+    }
+
+    .blob4 {
+        top: 58dvh;
+        right: -8vw;
+        animation: blob1 8s ease-in-out infinite;
+    }
+
+    .blob5 {
+        bottom: -10dvh;
+        left: 25vw;
+        animation: blob5 20s ease-in-out infinite;
+    }
+
+    .blob6 {
+        bottom: -12dvh;
+        left: 52vw;
+        width: min(40vw, 160px);
+        height: min(40vw, 160px);
+        animation: blob5 20s ease-in-out infinite;
     }
 }
