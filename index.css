@@ -463,13 +463,14 @@ button{
         width: 100dvw;
         height: 100dvh;
         overflow: hidden;
-        filter: blur(80px) brightness(0.8);
+        filter: blur(70px) brightness(0.8);
     }
 
     .blob {
-        width: min(52vw, 220px);
-        height: min(52vw, 220px);
-        opacity: 0.72;
+        width: 320px; 
+        height: 320px;
+        opacity: 1;
+        mix-blend-mode: normal;
     }
 
     .leftsect, .rightsect{
@@ -491,6 +492,8 @@ button{
     }
     .coverr{
         width: 100%;
+        outline: 0.3px solid #ffffff53;
+        outline-offset: -0.3px;
     }
     .title, .artist{
         font-size: 1rem;
@@ -509,47 +512,67 @@ button{
     }
 
     .controlerr button svg{
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
 
     .blob1 {
         top: 2dvh;
         left: -6vw;
-        animation: blob1 16s ease-in-out infinite;
     }
 
     .blob2 {
         top: 4dvh;
         right: 52vw;
-        animation: blob2 13s ease-in-out infinite;
+        filter: brightness(1.5);
     }
 
     .blob3 {
-        width: min(46vw, 190px);
-        height: min(46vw, 190px);
-        top: 36dvh;
-        right: 8vw;
-        animation: blob3 10s ease-in-out infinite;
+        width: 340px;
+        height: 340px;
+        top: 66dvh;
+        right: 40vw;
     }
 
     .blob4 {
         top: 58dvh;
         right: -8vw;
-        animation: blob1 8s ease-in-out infinite;
+        opacity: 0.8;
     }
 
     .blob5 {
         bottom: -10dvh;
         left: 25vw;
-        animation: blob5 20s ease-in-out infinite;
+        filter: brightness(1.8);
+        opacity: 0.5;
     }
 
     .blob6 {
-        bottom: -12dvh;
+        bottom: 62dvh;
         left: 52vw;
-        width: min(40vw, 160px);
-        height: min(40vw, 160px);
-        animation: blob5 20s ease-in-out infinite;
+        width: 340px;
+        height: 340px;
+        filter: brightness(2);
     }
+    
+    .probar, #volume{
+        height: 6px;
+    }
+    .probar{
+        background: linear-gradient(to right, #ffffffa4 var(--progress), #ffffff69 var(--progress));
+    }
+    #volume{
+        background: linear-gradient(to right, #ffffffa4 var(--volumee), #ffffff69 var(--volumee));
+    }
+    .probar::-webkit-slider-thumb, #volume::-webkit-slider-thumb{
+        opacity: 0;
+    }
+    .probar:hover::-webkit-slider-thumb{
+        opacity: 0;
+    }
+
+    #prevbtn svg, #nextbtn svg{
+        opacity: 1;
+    }
+    
 }
