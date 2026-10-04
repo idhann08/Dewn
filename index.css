@@ -129,27 +129,28 @@ div{
 }
 .minfo{
     display: flex;
-    align-items: start;
+    align-items: stretch;
     justify-content: center;
     width: 100%;
     margin-top: 20px;
 }
 .minfo-l{
-    width: 80%;
-    height: 100%;
+    flex: 1;
+    min-width: 0;
     display: flex;
     align-items: start;
     justify-content: start;
     flex-direction: column;
     white-space: nowrap;
     overflow: hidden;
+
     position: relative;
     -webkit-mask-image: linear-gradient(to left, transparent 0%, black 60px);
     mask-image: linear-gradient(to left, transparent 0%, black 60px);
 }
 .minfo-r{
-    width: 20%;
-    height: 100%;
+    flex: 0 0 auto;
+    padding-left: 10px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -165,6 +166,7 @@ div{
     border-radius: 100%;
     background: #ffffff1a;
     padding: 4px;
+    flex-shrink: 0;
 }
 .faviconsvg path{
     fill: none;
@@ -258,6 +260,7 @@ button{
     justify-content: center;
     border-radius: 100%;
     position: relative;
+    flex: 0 0 auto;
 }
 #playy::before{
     content: '';
@@ -281,6 +284,13 @@ button{
     fill: #ffffff;
 }
 
+#nextbtn, #prevbtn{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .progresstime{
     display: flex;
     align-items: center;
@@ -293,12 +303,13 @@ button{
 }
 
 .controlerr{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .controlerr button{
-    padding: 0 10px;
+    padding: 0;
 }
 .controlerr button svg{
     height: 50px;
@@ -307,7 +318,7 @@ button{
 }
 #shuffle svg, #loopbtn svg{
     height: 30px;
-    width: 100%;
+    width: 30px;
 }
 #shuffle svg, #prevbtn svg, #nextbtn svg, #loopbtn svg{
     opacity: 0.8;
@@ -487,8 +498,9 @@ button{
         height: 400px;
     }
     .lsect{
-        width: 300px;
+        width: 100dvw;
         padding: 0 30px;
+        box-sizing: border-box;
     }
     .coverr{
         width: 100%;
@@ -512,8 +524,8 @@ button{
     }
 
     .controlerr button svg{
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
     }
 
     .blob1 {
@@ -558,6 +570,9 @@ button{
     .probar, #volume{
         height: 6px;
     }
+    .probar:hover, #volume:hover{
+        height: 6px;
+    }
     .probar{
         background: linear-gradient(to right, #ffffffa4 var(--progress), #ffffff69 var(--progress));
     }
@@ -575,4 +590,10 @@ button{
         opacity: 1;
     }
     
+    .controlerr #shuffle svg, .controlerr #loopbtn svg{
+        display: none;
+    }
+    .controlerr{
+        justify-content: space-around;
+    }
 }
