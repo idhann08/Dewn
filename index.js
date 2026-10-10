@@ -1,4 +1,4 @@
-let cs = 0;
+let cs = Number(localStorage.getItem("cs")) || 0;
 let currentSong = songs[cs];
 let lastIndex = -1;
 
@@ -11,15 +11,14 @@ function formatTime(sec) {
 }
 
 
-// ====================
 // LOAD SONG
-// ====================
 
 function lss(){
 
     const song = songs[cs];
 
     currentSong = song;
+    localStorage.setItem("cs", cs);
 
     const album = albums.find(a => a.key === song.albumkey);
 
@@ -57,10 +56,13 @@ function lss(){
 
 lss();
 
+au.addEventListener("timeupdate", () => {
+    localStorage.setItem("time", au.currentTime);
+});
 
-// ====================
+
+
 // FAVORITE
-// ====================
 
 favbtnn.addEventListener("click", () => {
 
@@ -69,19 +71,20 @@ favbtnn.addEventListener("click", () => {
 });
 
 
-// ====================
 // PLAY / PAUSE
-// ====================
 
 function iconwhenplay(){
-    ply.innerHTML = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M6.5 4.5A1.5 1.5 0 0 1 8 3h1a1.5 1.5 0 0 1 1.5 1.5v15A1.5 1.5 0 0 1 9 21H8a1.5 1.5 0 0 1-1.5-1.5v-15Zm7 0A1.5 1.5 0 0 1 15 3h1a1.5 1.5 0 0 1 1.5 1.5v15A1.5 1.5 0 0 1 16 21h-1a1.5 1.5 0 0 1-1.5-1.5v-15Z"/>
-        </svg>`;
+    ply.innerHTML = `
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M8 3.5h1.5A1.5 1.5 0 0 1 11 5v14a1.5 1.5 0 0 1-1.5 1.5H8A1.5 1.5 0 0 1 6.5 19V5A1.5 1.5 0 0 1 8 3.5Zm6.5 0H16A1.5 1.5 0 0 1 17.5 5v14a1.5 1.5 0 0 1-1.5 1.5h-1.5A1.5 1.5 0 0 1 13 19V5a1.5 1.5 0 0 1 1.5-1.5Z"/>
+    </svg>
+    `;
 }
 function iconwhenpause(){
-    ply.innerHTML = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M6.8 3.5A1.5 1.5 0 0 0 4.5 4.8v14.4a1.5 1.5 0 0 0 2.3 1.3l12-7.2a1.5 1.5 0 0 0 0-2.6l-12-7.2Z"/>
-        </svg>`;
+    ply.innerHTML = `
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M6.8 3.5A1.5 1.5 0 0 0 4.5 4.8v14.4a1.5 1.5 0 0 0 2.3 1.3l12-7.2a1.5 1.5 0 0 0 0-2.6l-12-7.2Z"/>
+    </svg>`;
 }
 
 au.addEventListener("play", () => {
@@ -110,9 +113,8 @@ ply.addEventListener("click", async () => {
 
 });
 
-// ====================
+
 // NEXT SONG WHEN ENDED
-// ====================
 
 au.addEventListener("ended", () => {
 
@@ -127,9 +129,7 @@ au.addEventListener("ended", () => {
 
 });
 
-// ====================
 // PREVV SONG 
-// ====================
 prevbtn.addEventListener("click", () => {
     cs--;
 
@@ -142,9 +142,8 @@ prevbtn.addEventListener("click", () => {
     
 })
 
-// ====================
+
 // NEXTT SONG 
-// ====================
 nextbtn.addEventListener("click", () => {
     cs++;
 
@@ -157,9 +156,8 @@ nextbtn.addEventListener("click", () => {
     au.play()
 })
 
-// ====================
+
 // AUDIO METADATA
-// ====================
 
 au.addEventListener("loadedmetadata", () => {
 
@@ -181,13 +179,13 @@ au.addEventListener("loadedmetadata", () => {
         lastIndex = -1;
 
     });
+    
 
 });
 
 
-// ====================
+
 // AUDIO TIME UPDATE
-// ====================
 
 au.addEventListener("timeupdate", () => {
 
@@ -216,9 +214,8 @@ au.addEventListener("timeupdate", () => {
         "-" + formatTime(au.duration - au.currentTime);
 
 
-    // ====================
+
     // LYRICS SYNC
-    // ====================
 
     if (!currentSong.lyrics) return;
 
@@ -274,9 +271,8 @@ if (lyricLines[index]) {
 });
 
 
-// ====================
+
 // PROGRESS BAR
-// ====================
 
 pro.addEventListener("input", () => {
 
@@ -296,9 +292,8 @@ pro.addEventListener("input", () => {
 });
 
 
-// ====================
+
 // VOLUME
-// ====================
 
 volume.addEventListener("input", () => {
 
@@ -314,9 +309,8 @@ volume.addEventListener("input", () => {
 });
 
 
-// ====================
+
 // SPEAKER ICON
-// ====================
 
 function speakkker(){
 
@@ -393,13 +387,13 @@ document.addEventListener("keydown", (e) => {
     }
 
     // NEXT
-    if (e.code === "ArrowRight") {
+    if (e.ctrlKey && e.code === "ArrowRight") {
         e.preventDefault();
         nextbtn.click();
     }
 
     // PREV
-    if (e.code === "ArrowLeft") {
+    if (e.ctrlKey && e.code === "ArrowLeft") {
         e.preventDefault();
         prevbtn.click();
     }
@@ -419,7 +413,6 @@ function flexxx(){
     } else{
     }
 }
-flexxx();
 
 // Lyrics TOGGLEE
 
